@@ -6,5 +6,21 @@ namespace PassHold_WF
         {
             InitializeComponent();
         }
+
+        private void button_enter_Click(object sender, EventArgs e)
+        {
+            string? log = Convert.ToString(textBox_login.Text);
+            string? pas = Convert.ToString(textBox_password.Text);
+
+            Login.FileCreate(log, pas);
+            bool result = Login.Enter(log, pas);
+
+            if (result == true)
+            {
+                Form_menu newForm = new Form_menu();
+                newForm.Show();
+                this.Hide();
+            }
+        }
     }
 }

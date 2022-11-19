@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_form));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button_enter = new System.Windows.Forms.Button();
+            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.textBox_password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // button_enter
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.button_enter, "button_enter");
+            this.button_enter.Name = "button_enter";
+            this.button_enter.UseVisualStyleBackColor = true;
+            this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
             // 
-            // textBox1
+            // textBox_login
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.textBox_login, "textBox_login");
+            this.textBox_login.Name = "textBox_login";
             // 
-            // textBox2
+            // textBox_password
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.textBox_password, "textBox_password");
+            this.textBox_password.Name = "textBox_password";
             // 
             // label1
             // 
@@ -68,9 +69,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox_password);
+            this.Controls.Add(this.textBox_login);
+            this.Controls.Add(this.button_enter);
             this.Name = "Login_form";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -79,9 +80,9 @@
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button button_enter;
+        private TextBox textBox_login;
+        private TextBox textBox_password;
         private Label label1;
         private Label label2;
     }
