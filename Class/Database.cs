@@ -7,11 +7,11 @@ using System.Data.SQLite;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace PassHold_WF
+namespace PassHold_WF.Class
 {
     internal class Database
     {
-        public static string connectionString = ("Data source=Database.db; Version=3; New = True; Compress = True;"); // Здесь указываются параметры базы данных
+        public static string connectionString = "Data source=Database.db; Version=3; New = True; Compress = True;"; // Здесь указываются параметры базы данных
 
         public static SQLiteConnection? connection;
         public static SQLiteCommand? command;

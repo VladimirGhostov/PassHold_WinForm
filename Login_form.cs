@@ -1,3 +1,5 @@
+using PassHold_WF.Class;
+
 namespace PassHold_WF
 {
     public partial class Login_form : Form

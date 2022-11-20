@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PassHold_WF
+namespace PassHold_WF.Class
 {
     static class Login
     {
@@ -39,16 +39,16 @@ namespace PassHold_WF
             using (StreamReader reader = new StreamReader(path)) //Считываем строки из EnterData и получаем их хэш
             {
                 log = reader.ReadLine();
-                hash_log = String.GetHashCode(log);
+                hash_log = string.GetHashCode(log);
                 pas = reader.ReadLine();
-                hash_pas = String.GetHashCode(pas);
+                hash_pas = string.GetHashCode(pas);
                 reader.Close(); // Прекращаем взаимодействие с файлом EnterData
             }
 
-            hash_entered_login = String.GetHashCode(login); // Получаем хэш для введёного логина
-            hash_entered_password = String.GetHashCode(password); // Получаем хэш для введёного пароля
+            hash_entered_login = string.GetHashCode(login); // Получаем хэш для введёного логина
+            hash_entered_password = string.GetHashCode(password); // Получаем хэш для введёного пароля
 
-            if ((hash_log == hash_entered_login) & (hash_pas == hash_entered_password)) // Сравниваем хэши
+            if (hash_log == hash_entered_login & hash_pas == hash_entered_password) // Сравниваем хэши
             {
                 //MessageBox.Show("Вход успешный");
                 result = true;
