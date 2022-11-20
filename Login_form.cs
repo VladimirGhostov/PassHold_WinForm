@@ -7,7 +7,7 @@ namespace PassHold_WF
             InitializeComponent();
         }
 
-        private void button_enter_Click(object sender, EventArgs e)
+        private void Button_enter_Click(object sender, EventArgs e)
         {
             string? log = Convert.ToString(textBox_login.Text);
             string? pas = Convert.ToString(textBox_password.Text);
@@ -17,7 +17,7 @@ namespace PassHold_WF
 
             if (result == true)
             {
-                Form_menu newForm = new Form_menu();
+                Form_menu newForm = new();
                 newForm.Show();
                 this.Hide();
             }

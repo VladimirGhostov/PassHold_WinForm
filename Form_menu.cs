@@ -22,12 +22,31 @@ namespace PassHold_WF
 
         private void Form_menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Database.Close_Connect(); // Перед завершением программы прекращаем работать с базой данных
+            Application.Exit(); // Завершение программы
         }
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
-            Database.Cr_Connect();
+            Database.Create_Connect(); // Начинаем работу с базой данных
+            Database.CreateTable(); // Создаём таблицу
+        }
+
+        private void Button_enterData_Click(object sender, EventArgs e)
+        {
+            // Считываем значение текстбоксов
+            string id = textBox_ent_id.Text; 
+            string login = textBox_ent_login.Text;
+            string password = textBox_ent_password.Text;
+
+            Database.InsertData(id, login, password);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Database.ReadData();
+
+            dataGridView1.DataSource = Database.ReadData().Tables[0];
         }
     }
 }

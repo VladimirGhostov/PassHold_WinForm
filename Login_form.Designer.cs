@@ -41,7 +41,7 @@
             resources.ApplyResources(this.button_enter, "button_enter");
             this.button_enter.Name = "button_enter";
             this.button_enter.UseVisualStyleBackColor = true;
-            this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
+            this.button_enter.Click += new System.EventHandler(this.Button_enter_Click);
             // 
             // textBox_login
             // 
