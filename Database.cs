@@ -59,7 +59,7 @@ namespace PassHold_WF
             command.ExecuteNonQuery();
         }
 
-        public static DataSet ReadData()
+        public static DataSet ReadData() // Считываем базу данных и передаём её в значение dataSet
         {
             SQLiteDataAdapter dataAdapter = new("SELECT * From PassLog", connection);
 
@@ -70,12 +70,12 @@ namespace PassHold_WF
             return dataSet;
         }
 
-        public static void DeleteData(string select)
+        public static void DeleteData(string delete) // Удаление строки по выделенной ячейке ID
         {
             command = new SQLiteCommand
             {
-                Connection = connection,
-                CommandText = "DELETE FROM PassLog WHERE ID='" + select + "'"
+                CommandText = "DELETE FROM PassLog WHERE ID='" + delete + "'",
+                Connection = connection
             };
             command.ExecuteNonQuery();
         }

@@ -13,9 +13,7 @@ using System.Data.SQLite;
 namespace PassHold_WF
 {
     public partial class Form_menu : Form
-    {
-        public string select = ("");
-        
+    { 
         public Form_menu()
         {
             InitializeComponent();
@@ -41,6 +39,12 @@ namespace PassHold_WF
             string password = textBox_ent_password.Text;
 
             Database.InsertData(id, login, password);
+
+            notifyIcon1.ShowBalloonTip(1000, "PassHold", "Запись занесена в базу данных", ToolTipIcon.Info);
+
+            textBox_ent_id.Clear();
+            textBox_ent_login.Clear();
+            textBox_ent_password.Clear();
         }
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
@@ -50,18 +54,18 @@ namespace PassHold_WF
             dataGridView1.DataSource = Database.ReadData().Tables[0];
         }
 
-        private void ToolStripButton2_Click(object sender, EventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string select = dataGridView1.CurrentCell.Value.ToString();
-            MessageBox.Show(select);
-
-
-            Database.DeleteData(select);
+            string? s = dataGridView1.SelectedCells[0].Value.ToString();
+            //MessageBox.Show(s);
+            Clipboard.SetText(s);
         }
 
-        public void DataGridView1_CellClick(object sender, string select, DataGridViewCellEventArgs e)
+        private void ToolStripButton2_Click(object sender, EventArgs e)
         {
-            select = dataGridView1.CurrentCell.Value.ToString();
+            string delete = Clipboard.GetText();
+
+            Database.DeleteData(delete);
         }
     }
 }
