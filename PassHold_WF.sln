@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassHold_WF", "PassHold_WF.csproj", "{26ABB82F-10B0-4E31-A121-1AA8F8581640}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup files", "Setup files\Setup files.vdproj", "{B6A33F00-2605-4351-94F5-C4DECC29990B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{26ABB82F-10B0-4E31-A121-1AA8F8581640}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26ABB82F-10B0-4E31-A121-1AA8F8581640}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26ABB82F-10B0-4E31-A121-1AA8F8581640}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6A33F00-2605-4351-94F5-C4DECC29990B}.Debug|Any CPU.ActiveCfg = Debug
-		{B6A33F00-2605-4351-94F5-C4DECC29990B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
