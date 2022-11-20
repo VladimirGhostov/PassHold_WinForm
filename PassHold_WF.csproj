@@ -2,11 +2,22 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <StartupObject></StartupObject>
+    <ApplicationIcon>Resources\key.ico</ApplicationIcon>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <SignAssembly>False</SignAssembly>
+    <Company>Ghostov</Company>
+    <PackageIcon>key.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\key.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
@@ -26,6 +37,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\key.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
