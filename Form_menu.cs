@@ -14,7 +14,8 @@ namespace PassHold_WF
 {
     public partial class Form_menu : Form
     {
-
+        public string select = ("");
+        
         public Form_menu()
         {
             InitializeComponent();
@@ -42,11 +43,25 @@ namespace PassHold_WF
             Database.InsertData(id, login, password);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             Database.ReadData();
 
             dataGridView1.DataSource = Database.ReadData().Tables[0];
+        }
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
+        {
+            //string select = dataGridView1.CurrentCell.Value.ToString();
+            MessageBox.Show(select);
+
+
+            Database.DeleteData(select);
+        }
+
+        public void DataGridView1_CellClick(object sender, string select, DataGridViewCellEventArgs e)
+        {
+            select = dataGridView1.CurrentCell.Value.ToString();
         }
     }
 }

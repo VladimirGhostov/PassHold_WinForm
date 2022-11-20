@@ -50,7 +50,7 @@ namespace PassHold_WF
 
             if ((hash_log == hash_entered_login) & (hash_pas == hash_entered_password)) // Сравниваем хэши
             {
-                MessageBox.Show("Вход успешный");
+                //MessageBox.Show("Вход успешный");
                 result = true;
                 return result;
             }

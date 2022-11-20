@@ -39,6 +39,7 @@
             // button_enter
             // 
             resources.ApplyResources(this.button_enter, "button_enter");
+            this.button_enter.Image = global::PassHold_WF.Properties.Resources.baseline_login_black_24dp;
             this.button_enter.Name = "button_enter";
             this.button_enter.UseVisualStyleBackColor = true;
             this.button_enter.Click += new System.EventHandler(this.Button_enter_Click);
@@ -67,11 +68,14 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::PassHold_WF.Properties.Resources.key;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.button_enter);
+            this.DoubleBuffered = true;
             this.Name = "Login_form";
             this.ResumeLayout(false);
             this.PerformLayout();

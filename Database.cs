@@ -69,5 +69,15 @@ namespace PassHold_WF
 
             return dataSet;
         }
+
+        public static void DeleteData(string select)
+        {
+            command = new SQLiteCommand
+            {
+                Connection = connection,
+                CommandText = "DELETE FROM PassLog WHERE ID='" + select + "'"
+            };
+            command.ExecuteNonQuery();
+        }
     }
 }
