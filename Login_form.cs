@@ -9,13 +9,16 @@ namespace PassHold_WF
             InitializeComponent();
         }
 
-        private void Button_enter_Click(object sender, EventArgs e)
+        private void Button_enter_Click(object sender, EventArgs e) // Событие нажатия кнопки "Войти"
         {
+            // Считываем значения текстбоксов
             string? log = Convert.ToString(textBox_login.Text);
             string? pas = Convert.ToString(textBox_password.Text);
 
             Login.FileCreate(log, pas);
             bool result = Login.Enter(log, pas);
+
+            // Проверка, сходятся ли пароли
 
             if (result == true)
             {
